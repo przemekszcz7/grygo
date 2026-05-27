@@ -70,7 +70,6 @@
       scroll-behavior: smooth;
       background-color: var(--c-bg);
       color: var(--c-white);
-      overflow-x: hidden;
     }
 
     body {
@@ -1505,6 +1504,11 @@
 
       .mobile-nav-toggle {
         display: flex;
+      }
+
+      .nav-title {
+        font-size: clamp(13px, 3.8vw, 16px);
+        letter-spacing: 0.02em;
       }
 
       .hero-content {
