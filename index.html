@@ -1,0 +1,2176 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grygo Nieruchomości — Ekspert & Pośrednik Nieruchomości Suwałki</title>
+  
+  <!-- Favicon and touches -->
+  <link rel="icon" type="image/jpeg" href="https://i.ibb.co/KpD79Mbz/503936029-122161069682564448-8956492118507403377-n.jpg">
+  
+  <!-- Font Preconnect & Links for 2026 Typography (including ultra weights 200 and 800) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,600&family=Josefin+Sans:wght@200;300;400;500;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* PREMIUM DESIGN SYSTEM (2026 EDITION) */
+    :root {
+      --c-bg:           #08080A;   /* absolute luxury near-black */
+      --c-bg-2:         #0F0F12;   /* slightly lighter rich surface */
+      --c-bg-3:         #15151A;   /* elevated strategic slate */
+      --c-bg-light:     #F3F2EE;   /* pure editorial off-white section */
+      --c-accent:       #132B52;   /* deep navy blue brand core */
+      --c-accent-light: #2A4F85;   /* active visual states */
+      --c-accent-dim:   rgba(19, 43, 82, 0.2);
+      --c-accent-line:  rgba(42, 79, 133, 0.25);
+      
+      /* Surgical Royal Neutral */
+      --c-gold:         #CCA66B;   /* refined light gold */
+      --c-gold-light:   #E2C597;   /* soft glowing accent */
+      --c-gold-dim:     rgba(204, 166, 107, 0.12);
+      
+      --c-white:        #ECEAE4;   /* organic warm off-white */
+      --c-gray:         #6B6969;   /* sleek secondary text Muted */
+      --c-gray-light:   #A09E9B;   /* light caption silver */
+      --c-line:         rgba(236, 234, 228, 0.05); /* seamless subtle grids */
+
+      /* Typographic Scale */
+      --t-display:  clamp(70px, 11vw, 150px);
+      --t-h1:       clamp(45px, 6.5vw, 84px);
+      --t-h2:       clamp(32px, 4.2vw, 56px);
+      --t-h3:       clamp(19px, 2.2vw, 30px);
+      --t-label:    11px;  /* Josefin Sans, uppercase, letter-spacing: 0.28em */
+      --t-body:     16px;  /* Lato 300, line-height: 1.95 */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* CUSTOM AMBIENT SCROLLBAR */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--c-bg);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--c-accent-light);
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--c-gold);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--c-bg);
+      color: var(--c-white);
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: var(--t-body);
+      line-height: 1.95;
+      background-color: var(--c-bg);
+      color: var(--c-white);
+      overflow-x: hidden;
+    }
+
+    /* TYPOGRAPHIC PRINCIPLES */
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
+    /* CINEMATIC PRE-LOAD FLASH OVERLAY */
+    .cinematic-flash {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #000000;
+      z-index: 10000;
+      opacity: 1;
+      pointer-events: none;
+      transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .cinematic-flash.fade-out {
+      opacity: 0;
+    }
+
+    /* CUSTOM DYNAMIC CURSOR (2026 EDITION) */
+    .custom-cursor {
+      width: 20px;
+      height: 20px;
+      border: 1.5px solid var(--c-gold);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1), height 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.35s, border-color 0.35s;
+      opacity: 0;
+    }
+    body.cursor-hover .custom-cursor {
+      width: 40px;
+      height: 40px;
+      background-color: rgba(204, 166, 107, 0.08);
+      border-color: var(--c-gold-light);
+    }
+    @media (min-width: 769px) {
+      html, body, a, button, select, input, textarea, .planner-btn, .uslugi-row, .process-row, .manifesto-card {
+        cursor: none !important;
+      }
+      .custom-cursor {
+        opacity: 1;
+      }
+    }
+
+    /* ASYMMETRICAL LUXURY INTERACTION (CURSORS GLOW) */
+    #ambientGlow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: radial-gradient(circle 350px at 50% 50%, rgba(30, 60, 110, 0.04), transparent 80%),
+                  radial-gradient(circle 250px at 80% 20%, rgba(204, 166, 107, 0.02), transparent 70%);
+      pointer-events: none;
+      z-index: 1;
+      transition: background 0.3s ease;
+    }
+
+    /* SCROLL REVEAL SCENE */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* FIXED HEADER NAVBAR */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background: transparent;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 35px 8vw;
+      border-bottom: 1px solid transparent;
+      transition: background 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                  padding 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                  border-bottom 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                  backdrop-filter 0.4s ease;
+    }
+
+    nav.scrolled {
+      background: rgba(8, 8, 10, 0.96);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--c-line);
+      padding: 18px 8vw;
+    }
+
+    /* 2026 Luxury Grain Noise Overlay */
+    nav.scrolled::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      opacity: 0.04;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .nav-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 16px;
+      color: var(--c-white);
+      letter-spacing: 0.05em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 45px;
+    }
+
+    .nav-link {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 400;
+      font-size: var(--t-label);
+      color: var(--c-gray-light);
+      text-transform: uppercase;
+      letter-spacing: 0.28em;
+      text-decoration: none;
+      position: relative;
+      padding: 4px 0;
+      transition: color 0.3s;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--c-gold);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--c-white);
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* Hamburger & Mobile Menu Overlay */
+    .mobile-nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 24px;
+      height: 14px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 110;
+    }
+
+    .mobile-nav-toggle span {
+      display: block;
+      width: 100%;
+      height: 1.5px;
+      background-color: var(--c-white);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+    }
+
+    .mobile-nav-toggle.open span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    .mobile-nav-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .mobile-nav-toggle.open span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+
+    .mobile-nav-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: var(--c-bg);
+      z-index: 105;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .mobile-nav-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 36px;
+    }
+
+    .mobile-link {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 38px;
+      color: var(--c-white);
+      text-decoration: none;
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .mobile-nav-overlay.open .mobile-link {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .mobile-nav-overlay.open .mobile-link:nth-child(1) { transition-delay: 0.1s; }
+    .mobile-nav-overlay.open .mobile-link:nth-child(2) { transition-delay: 0.2s; }
+    .mobile-nav-overlay.open .mobile-link:nth-child(3) { transition-delay: 0.3s; }
+    .mobile-nav-overlay.open .mobile-link:nth-child(4) { transition-delay: 0.4s; }
+
+    .mobile-link:hover {
+      color: var(--c-gold);
+      opacity: 0.9;
+    }
+
+    body.no-scroll {
+      overflow: hidden;
+    }
+
+    /* STICKY VERTICAL PILL (2026 LUXURY LAYOUTS) */
+    .sticky-vertical-pill {
+      position: fixed;
+      right: 3vw;
+      top: 50%;
+      transform: translateY(-50%) rotate(90deg);
+      transform-origin: right center;
+      z-index: 90;
+      pointer-events: none;
+      display: block;
+    }
+    .sticky-vertical-pill span {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.38em;
+      color: var(--c-white);
+      opacity: 0.15;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    @media (max-width: 768px) {
+      .sticky-vertical-pill {
+        display: none;
+      }
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+      background-color: var(--c-bg);
+      overflow: hidden;
+      border-bottom: 1px solid var(--c-line);
+      display: flex;
+      align-items: center;
+    }
+
+    /* Refined horizontal scan lines background replacing dots */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(236, 234, 228, 0.03) 1px, transparent 1px);
+      background-size: 100% 4px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: absolute;
+      bottom: 20vh;
+      left: 8vw;
+      right: 8vw;
+      z-index: 10;
+      max-width: 900px;
+    }
+
+    /* Stagger Loading Animations */
+    .hero-stagger {
+      opacity: 0;
+      transform: translateY(26px);
+      animation: heroFadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .hero-stagger:nth-child(1) { animation-delay: 0.1s; }
+    .hero-stagger:nth-child(2) { animation-delay: 0.25s; }
+    .hero-stagger:nth-child(3) { animation-delay: 0.4s; }
+    .hero-stagger:nth-child(4) { animation-delay: 0.55s; }
+    .hero-stagger:nth-child(5) { animation-delay: 0.7s; }
+
+    @keyframes heroFadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-eyebrow {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: var(--t-label);
+      color: var(--c-gold);
+      letter-spacing: 0.3em;
+      margin-bottom: 22px;
+      display: block;
+    }
+
+    /* 2026 HERO TYPOGRAPHY: INSTANT EDITORIAL TENSION */
+    .hero-display-split {
+      font-family: 'Cormorant Garamond', serif;
+      line-height: 0.9;
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+    }
+    .hero-display-outline {
+      font-size: clamp(75px, 12vw, 160px);
+      font-weight: 800; /* Ultra extreme weight next to thin list */
+      color: transparent;
+      -webkit-text-stroke: 1.5px var(--c-white);
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      line-height: 0.95;
+    }
+    .hero-display-filled {
+      font-size: clamp(40px, 6vw, 80px);
+      font-weight: 200; /* Subtle weight pairing */
+      color: var(--c-gold);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: -5px;
+    }
+
+    .hero-hr {
+      width: 70px;
+      height: 1px;
+      border: none;
+      background-color: var(--c-gold);
+      margin: 32px 0;
+    }
+
+    .hero-statement {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 20px;
+      color: var(--c-gray-light);
+      line-height: 1.8;
+      max-width: 580px;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: var(--t-label);
+      color: var(--c-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      text-decoration: none;
+      margin-top: 42px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid rgba(204, 166, 107, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .hero-cta:hover {
+      color: var(--c-white);
+      border-bottom-color: var(--c-white);
+      transform: translateX(6px);
+    }
+
+    .hero-right-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(70px, 13vw, 170px);
+      color: var(--c-white);
+      opacity: 0.015;
+      position: absolute;
+      right: 5vw;
+      top: 50%;
+      transform: translateY(-50%) rotate(90deg);
+      transform-origin: center center;
+      white-space: nowrap;
+      pointer-events: none;
+      letter-spacing: 0.1em;
+    }
+
+    /* Scroll Indicator Dot */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 80px; /* offset for ticker layout */
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .scroll-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: var(--c-gold);
+      animation: scrollBounce 2s infinite ease-in-out;
+    }
+
+    @keyframes scrollBounce {
+      0%, 100% {
+        transform: translateY(0);
+        opacity: 0.2;
+      }
+      50% {
+        transform: translateY(14px);
+        opacity: 1;
+      }
+    }
+
+    /* PURE CSS INFINITE LOOP TICKER AT BOTTOM OF HERO */
+    .hero-ticker {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--c-bg-2);
+      border-top: 1px solid var(--c-line);
+      padding: 18px 0;
+      overflow: hidden;
+      z-index: 10;
+    }
+    .ticker-wrapper {
+      display: flex;
+      width: max-content;
+    }
+    .ticker-content {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 300;
+      font-size: 11px;
+      color: var(--c-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      white-space: nowrap;
+      padding-right: 4rem;
+      animation: tickerScroll 30s linear infinite;
+    }
+    @keyframes tickerScroll {
+      0% {
+        transform: translate3d(0, 0, 0);
+      }
+      100% {
+        transform: translate3d(-50%, 0, 0);
+      }
+    }
+
+    /* O MNIE SECTION (Increased padding by 20% + rhythm customization) */
+    .o-mnie {
+      background-color: var(--c-bg-2);
+      padding: 170px 8vw; /* Air increase */
+      border-bottom: 1px solid var(--c-line);
+    }
+
+    .o-mnie-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 8vw;
+    }
+
+    .o-mnie-left {
+      width: 58%;
+    }
+
+    .o-mnie-eyebrow {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: var(--t-label);
+      color: var(--c-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.28em;
+      display: block;
+    }
+
+    .o-mnie-vertical-line {
+      width: 1px;
+      height: 52px;
+      background: linear-gradient(to bottom, var(--c-gold), transparent);
+      margin: 15px 0 25px 0;
+    }
+
+    /* DELIBERATE GRID BREAK: OVERLAY & OVERFLOW (Negative Margin) */
+    .o-mnie-h2 {
+      font-weight: 600;
+      font-size: var(--t-h2);
+      color: var(--c-white);
+      line-height: 1.2;
+      margin-left: -5vw; /* Grid breaker layout shift */
+      white-space: nowrap;
+      position: relative;
+      z-index: 5;
+      overflow: visible;
+    }
+    @media (max-width: 1200px) {
+      .o-mnie-h2 {
+        margin-left: 0;
+        white-space: normal;
+      }
+    }
+
+    .o-mnie-body {
+      color: var(--c-gray-light);
+      margin-top: 28px;
+    }
+
+    .o-mnie-body p {
+      margin-bottom: 24px;
+      font-weight: 300;
+    }
+
+    .o-mnie-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .o-mnie-contact-block {
+      margin-top: 48px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .o-mnie-label {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: var(--t-label);
+      color: var(--c-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.28em;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .o-mnie-phone {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 24px;
+      color: var(--c-white);
+      text-decoration: none;
+      display: inline-block;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .o-mnie-email {
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      color: var(--c-gray-light);
+      text-decoration: none;
+      display: inline-block;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .o-mnie-phone:hover {
+      color: var(--c-gold);
+      transform: translateX(4px);
+    }
+    
+    .o-mnie-email:hover {
+      color: var(--c-gold);
+      transform: translateX(4px);
+    }
+
+    .o-mnie-right {
+      width: 42%;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .o-mnie-accent-line {
+      position: absolute;
+      left: 0;
+      top: 15%;
+      width: 1px;
+      height: 60%;
+      background: linear-gradient(to bottom, transparent, var(--c-gold-dim), transparent);
+    }
+
+    .o-mnie-offset-block {
+      padding-left: 56px;
+    }
+
+    .o-mnie-city {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 68px;
+      color: var(--c-gold);
+      opacity: 0.25;
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .o-mnie-accent-short {
+      width: 40px;
+      height: 1px;
+      background-color: var(--c-gold);
+      margin-bottom: 24px;
+    }
+
+    .o-mnie-descriptors {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 12px;
+      color: var(--c-gray-light);
+      letter-spacing: 0.18em;
+      line-height: 2.0;
+      text-transform: uppercase;
+    }
+
+    /* REAL ESTATE STRATEGY PRINCIPLES BAR (Asymmetrical Padding breath) */
+    .brand-manifesto {
+      background-color: var(--c-bg-2);
+      padding: 0 8vw 150px 8vw; /* Air rhythm spacer */
+      border-bottom: 1px solid var(--c-line);
+    }
+
+    .manifesto-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+
+    .manifesto-card {
+      background-color: var(--c-bg-3);
+      padding: 40px;
+      border: 1px solid var(--c-line);
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.4s ease, transform 0.4s ease;
+    }
+
+    .manifesto-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--c-gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+
+    .manifesto-card:hover {
+      border-color: rgba(204, 166, 107, 0.2);
+      transform: translateY(-4px);
+    }
+
+    .manifesto-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .manifesto-number {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 11px;
+      color: var(--c-gold);
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .manifesto-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--c-white);
+      margin-bottom: 14px;
+    }
+
+    .manifesto-text {
+      color: var(--c-gray-light);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    /* USŁUGI SECTION (Generous Spacing padding: 190px - huge visual air) */
+    .uslugi {
+      background-color: var(--c-bg);
+      padding: 190px 8vw; /* Large modern pacing */
+      border-bottom: 1px solid var(--c-line);
+    }
+
+    .uslugi-header {
+      max-width: 560px;
+      margin-bottom: 84px;
+    }
+
+    .uslugi-eyebrow {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: var(--t-label);
+      color: var(--c-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.28em;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .uslugi-h2 {
+      font-size: var(--t-h2);
+      color: var(--c-white);
+    }
+
+    .uslugi-rows {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .uslugi-row {
+      display: grid;
+      grid-template-columns: 110px 1fr 340px;
+      align-items: center;
+      border-top: 1px solid var(--c-line);
+      padding: 44px 24px; /* Air increase */
+      transition: background-color 0.4s ease, padding-left 0.4s ease, border-top-color 0.4s ease;
+      position: relative;
+    }
+
+    .uslugi-row:last-child {
+      border-bottom: 1px solid var(--c-line);
+    }
+
+    /* Hover effect: Accent Left Bar Sliding animation */
+    .uslugi-row::before, .process-row::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 3px;
+      height: 100%;
+      background-color: var(--c-gold);
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 5;
+    }
+    .uslugi-row:hover::before, .process-row:hover::before {
+      transform: scaleY(1);
+    }
+
+    /* Numbers: On hover shift position right + full opacity (Micro Motion) */
+    .uslugi-num, .process-num {
+      font-family: 'Cormorant Garamond', serif;
+      opacity: 0.15;
+      line-height: 1;
+      display: inline-block;
+      transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .uslugi-num {
+      font-size: 66px;
+      color: var(--c-gold);
+    }
+    .uslugi-row:hover .uslugi-num {
+      opacity: 1;
+      transform: translateX(8px);
+    }
+
+    .uslugi-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 28px;
+      color: var(--c-white);
+      transition: color 0.4s ease;
+    }
+
+    .uslugi-desc {
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 15px;
+      color: var(--c-gray-light);
+      text-align: right;
+      line-height: 1.8;
+    }
+
+    .uslugi-row:hover {
+      background-color: var(--c-accent-dim);
+      padding-left: 36px;
+      border-top-color: var(--c-accent-light);
+    }
+
+    .uslugi-row:hover .uslugi-title {
+      color: var(--c-gold);
+    }
+
+    /* INTERACTIVE STRATEGIC PLANNER/CONCIERGE (Padding contrast: 110px) */
+    .concierge-section {
+      background-color: var(--c-bg);
+      padding: 110px 8vw; /* Shorter breaker of pace */
+      border-bottom: 1px solid var(--c-line);
+    }
+
+    .concierge-grid {
+      display: grid;
+      grid-template-columns: 40% 60%;
+      gap: 6vw;
+      align-items: start;
+    }
+
+    .concierge-left {
+      position: sticky;
+      top: 140px;
+    }
+
+    .concierge-eyebrow {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: var(--t-label);
+      color: var(--c-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.28em;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .concierge-h2 {
+      font-size: var(--t-h2);
+      color: var(--c-white);
+      line-height: 1.25;
+      margin-bottom: 24px;
+    }
+
+    .concierge-lead {
+      color: var(--c-gray-light);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .concierge-right {
+      background-color: var(--c-bg-2);
+      border: 1px solid var(--c-line);
+      padding: 56px;
+    }
+
+    .planner-title {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: var(--t-label);
+      color: var(--c-gold);
+      letter-spacing: 0.2em;
+      margin-bottom: 32px;
+      display: block;
+      border-bottom: 1px solid var(--c-line);
+      padding-bottom: 16px;
+    }
+
+    .planner-group {
+      margin-bottom: 36px;
+    }
+
+    .planner-label {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 11px;
+      color: var(--c-white);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .planner-options {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .planner-btn {
+      background-color: transparent;
+      border: 1px solid var(--c-line);
+      color: var(--c-gray-light);
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 11px;
+      padding: 14px 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .planner-btn.active {
+      border-color: var(--c-gold);
+      color: var(--c-gold);
+      background-color: rgba(204, 166, 107, 0.05);
+    }
+
+    .planner-btn:hover {
+      border-color: var(--c-gray-light);
+    }
+
+    .planner-card-advice {
+      background-color: var(--c-bg-3);
+      border-left: 2px solid var(--c-gold);
+      padding: 32px;
+      margin-top: 40px;
+      min-height: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .advice-header {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 10px;
+      color: var(--c-gold);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .advice-content {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 19px;
+      color: var(--c-white);
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    /* JAK PRACUJĘ SECTION (High Contrast Light Canvas - Padding: 180px ) */
+    .jak-pracuje {
+      background-color: var(--c-bg-light);
+      padding: 180px 8vw 150px 8vw; /* Air rhythm pacing */
+      clip-path: polygon(0 4vw, 100% 0%, 100% 100%, 0% 100%);
+      position: relative;
+      z-index: 5;
+      margin-top: -4vw;
+    }
+
+    .jak-pracuje-header {
+      margin-bottom: 72px;
+    }
+
+    .jak-pracuje-eyebrow {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: var(--t-label);
+      color: var(--c-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.28em;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .jak-pracuje-h2 {
+      font-size: var(--t-h2);
+      color: var(--c-bg);
+      line-height: 1.25;
+    }
+
+    .process-rows {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .process-row {
+      display: grid;
+      grid-template-columns: 110px 1fr 340px;
+      align-items: center;
+      border-top: 1px solid rgba(19, 43, 82, 0.15);
+      padding: 42px 24px; /* Air pacing */
+      position: relative;
+      transition: background-color 0.4s ease, padding-left 0.4s ease;
+    }
+
+    .process-row:last-child {
+      border-bottom: 1px solid rgba(19, 43, 82, 0.15);
+    }
+
+    /* Hover Left Accent Line for process items */
+    .process-row::before {
+      background-color: var(--c-accent);
+    }
+
+    /* Process Item Numbers Hover (Micro Motion) */
+    .process-num {
+      font-size: 68px;
+      color: var(--c-accent);
+    }
+    .process-row:hover .process-num {
+      opacity: 1;
+      transform: translateX(8px);
+    }
+
+    .process-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 28px;
+      color: var(--c-bg);
+      transition: color 0.4s ease;
+    }
+
+    .process-desc {
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 15px;
+      color: #514F4B;
+      text-align: right;
+      line-height: 1.8;
+    }
+
+    .process-row:hover {
+      background-color: rgba(19, 43, 82, 0.05);
+      padding-left: 36px;
+    }
+
+    .process-row:hover .process-title {
+      color: var(--c-accent);
+    }
+
+    /* KONTAKT SECTION (Padding: 170px) */
+    .kontakt {
+      background-color: var(--c-bg-3);
+      padding: 170px 8vw; /* Air preservation */
+      border-top: 1px solid var(--c-line);
+    }
+
+    .kontakt-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 8vw;
+    }
+
+    .kontakt-left {
+      width: 42%;
+    }
+
+    .kontakt-eyebrow {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: var(--t-label);
+      color: var(--c-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.28em;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .kontakt-h2 {
+      font-size: var(--t-h2);
+      color: var(--c-white);
+      line-height: 1.25;
+    }
+
+    .kontakt-accent-line {
+      width: 56px;
+      height: 1px;
+      background-color: var(--c-gold);
+      margin: 28px 0;
+    }
+
+    .kontakt-item {
+      margin-bottom: 32px;
+    }
+
+    .kontakt-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .kontakt-label {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: var(--t-label);
+      color: var(--c-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.28em;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .kontakt-phone {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 30px;
+      color: var(--c-white);
+      text-decoration: none;
+      display: inline-block;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .kontakt-email {
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      color: var(--c-gray-light);
+      text-decoration: none;
+      display: inline-block;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .kontakt-loc {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 300;
+      font-size: 15px;
+      color: var(--c-gray-light);
+      letter-spacing: 0.05em;
+    }
+
+    .kontakt-fb {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      color: var(--c-gray-light);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      transition: color 0.3s ease, transform 0.3s ease;
+      display: inline-block;
+    }
+
+    .kontakt-phone:hover {
+      color: var(--c-gold);
+      transform: translateX(4px);
+    }
+
+    .kontakt-email:hover {
+      color: var(--c-gold);
+      transform: translateX(4px);
+    }
+
+    .kontakt-fb:hover {
+      color: var(--c-gold);
+      transform: translateX(4px);
+    }
+
+    .kontakt-right {
+      width: 58%;
+    }
+
+    .kontakt-form {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    .form-group-custom {
+      position: relative;
+      width: 100%;
+    }
+
+    /* 2026 Focus Undeline Expansion animation */
+    .form-group-custom::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background-color: var(--c-gold);
+      transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+    }
+    .form-group-custom:focus-within::after {
+      width: 100%;
+    }
+
+    .kontakt-form input,
+    .kontakt-form textarea,
+    .kontakt-form select {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--c-line);
+      color: var(--c-white);
+      padding: 14px 0;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 15px;
+      width: 100%;
+      border-radius: 0;
+      transition: border-bottom-color 0.4s ease;
+    }
+
+    .kontakt-form input::placeholder,
+    .kontakt-form textarea::placeholder {
+      color: var(--c-gray);
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 300;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+
+    .kontakt-form input:focus,
+    .kontakt-form textarea:focus,
+    .kontakt-form select:focus {
+      outline: none;
+      border-bottom-color: rgba(236, 234, 228, 0.15); /* very soft fallback so animated element glows properly */
+    }
+
+    /* Custom high-end select chevron */
+    .kontakt-form select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23CCA66B' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><path d='m6 9 6 6 6-6'/></svg>");
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: 16px;
+      padding-right: 24px;
+    }
+
+    .kontakt-form select option {
+      background-color: var(--c-bg-3);
+      color: var(--c-white);
+    }
+
+    .kontakt-form textarea {
+      height: 120px;
+      resize: none;
+    }
+
+    .submit-button {
+      align-self: flex-start;
+      border: 1px solid var(--c-gold);
+      color: var(--c-gold);
+      background: transparent;
+      padding: 14px 48px;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: var(--t-label);
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      border-radius: 0;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, transform 0.3s ease;
+    }
+
+    .submit-button:hover {
+      background-color: var(--c-gold);
+      color: var(--c-bg);
+      border-color: var(--c-gold);
+      transform: translateY(-2px);
+    }
+
+    /* Toast Notification Message */
+    .toast {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      background-color: var(--c-accent-light);
+      border-left: 3px solid var(--c-gold);
+      color: var(--c-white);
+      padding: 18px 32px;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      opacity: 0;
+      transform: translateY(100px);
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
+      z-index: 200;
+    }
+
+    .toast.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
+    /* FOOTER */
+    footer {
+      background-color: var(--c-bg);
+      border-top: 1px solid var(--c-line);
+      padding: 80px 8vw; /* Air rhythm spacing to look modern */
+      position: relative;
+      z-index: 8;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+    }
+
+    .footer-left {
+      text-align: left;
+    }
+
+    .footer-brand {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--c-white);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .footer-city {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 11px;
+      color: var(--c-gray-light);
+      margin-top: 6px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .footer-center {
+      text-align: center;
+    }
+
+    .footer-logo {
+      height: 36px;
+      width: 36px;
+      border-radius: 50%;
+      margin: 0 auto;
+      object-fit: cover;
+      border: 1px solid rgba(204, 166, 107, 0.25);
+      padding: 1px;
+      display: block;
+    }
+
+    .footer-copy {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 11px;
+      color: var(--c-gray);
+      margin-top: 12px;
+      letter-spacing: 0.1em;
+    }
+
+    .footer-right {
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .footer-phone {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 13px;
+      color: var(--c-white);
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      transition: color 0.3s;
+    }
+
+    .footer-fb {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 12px;
+      color: var(--c-gray-light);
+      text-decoration: none;
+      margin-top: 6px;
+      letter-spacing: 0.1em;
+      transition: color 0.3s;
+    }
+
+    .footer-phone:hover, .footer-fb:hover {
+      color: var(--c-gold);
+    }
+
+
+    /* RESPONSIVE DESIGN (< 768px) */
+    @media (max-width: 992px) {
+      .concierge-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .concierge-left {
+        position: static;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 22px 6vw;
+      }
+
+      nav.scrolled {
+        padding: 16px 6vw;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-nav-toggle {
+        display: flex;
+      }
+
+      .hero-content {
+        bottom: 12vh;
+        left: 6vw;
+        right: 6vw;
+      }
+
+      .hero-right-text {
+        display: none;
+      }
+
+      .o-mnie {
+        padding: 120px 6vw;
+      }
+
+      .o-mnie-container {
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .o-mnie-left {
+        width: 100%;
+      }
+
+      .o-mnie-right {
+        width: 100%;
+        border-left: 3px solid var(--c-gold);
+        padding-left: 24px;
+        align-items: flex-start;
+      }
+
+      .o-mnie-accent-line {
+        display: none;
+      }
+
+      .o-mnie-offset-block {
+        padding-left: 0;
+      }
+
+      .manifesto-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .brand-manifesto {
+        padding: 0 6vw 100px 6vw;
+      }
+
+      .uslugi {
+        padding: 120px 6vw;
+      }
+
+      .uslugi-row, .process-row {
+        grid-template-columns: 60px 1fr;
+        padding: 28px 0;
+        gap: 12px;
+      }
+
+      .uslugi-desc, .process-desc {
+        grid-column: 1 / span 2;
+        text-align: left;
+        max-width: 100%;
+        margin-top: 8px;
+        padding-left: 72px;
+      }
+
+      .uslugi-num, .process-num {
+        font-size: 48px;
+      }
+
+      .uslugi-title, .process-title {
+        font-size: 22px;
+        align-self: center;
+      }
+
+      .concierge-section {
+        padding: 100px 6vw;
+      }
+
+      .concierge-right {
+        padding: 32px 24px;
+      }
+
+      .planner-options {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .jak-pracuje {
+        padding: 130px 6vw 110px 6vw;
+      }
+
+      .kontakt {
+        padding: 120px 6vw;
+      }
+
+      .kontakt-container {
+        flex-direction: column;
+        gap: 56px;
+      }
+
+      .kontakt-left, .kontakt-right {
+        width: 100%;
+      }
+
+      .kontakt-form {
+        gap: 24px;
+      }
+
+      footer {
+        padding: 56px 6vw;
+      }
+
+      .footer-container {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        text-align: center;
+      }
+
+      .footer-left, .footer-right {
+        text-align: center;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CINEMATIC PRE-INTENT OPENING FADE FADER -->
+  <div class="cinematic-flash" id="cinematicFlash"></div>
+
+  <!-- CUSTOM MOUSE LAG CURSOR FOR ROYAL WEB FEEL -->
+  <div class="custom-cursor" id="customCursor"></div>
+
+  <!-- BACKGROUND AMBIENT SHOWER -->
+  <div id="ambientGlow"></div>
+
+  <!-- NAVIGATION HEADER -->
+  <nav id="navbar">
+    <a href="#" class="nav-left">
+      <span class="nav-title">Grygo Nieruchomości</span>
+    </a>
+    <div class="nav-links">
+      <a href="#o-mnie" class="nav-link">O mnie</a>
+      <a href="#uslugi" class="nav-link">Usługi</a>
+      <a href="#doradztwo" class="nav-link">Strategia</a>
+      <a href="#jak-pracuje" class="nav-link">Jak pracuję</a>
+      <a href="#kontakt" class="nav-link">Kontakt</a>
+    </div>
+    <button class="mobile-nav-toggle" aria-label="Menu" id="mobileNavToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE OVERLAY MENU -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <div class="mobile-nav-links">
+      <a href="#o-mnie" class="mobile-link">O mnie</a>
+      <a href="#uslugi" class="mobile-link">Usługi</a>
+      <a href="#doradztwo" class="mobile-link">Strategia</a>
+      <a href="#jak-pracuje" class="mobile-link">Jak pracuję</a>
+      <a href="#kontakt" class="mobile-link">Kontakt</a>
+    </div>
+  </div>
+
+  <!-- STICKY VERTICAL PILL FOR MODERN LUXURY SENSE -->
+  <div class="sticky-vertical-pill">
+    <span>GRYGO NIERUCHOMOŚCI</span>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <span class="hero-eyebrow hero-stagger">OSOBISTY ADWOKAT TRANSAKCYJNY • SUWAŁKI</span>
+        
+        <!-- EDITORIAL tension: 800 heavy next to 200 light pairs -->
+        <h1 class="hero-display-split hero-stagger">
+          <span class="hero-display-outline">Grygo</span>
+          <span class="hero-display-filled">Nieruchomości</span>
+        </h1>
+        
+        <hr class="hero-hr hero-stagger">
+        <p class="hero-statement hero-stagger">
+          Prowadzę klientów przez strategiczne decyzje na rynku nieruchomości. Negocjuję warunki i zabezpieczam interes klienta.
+        </p>
+        <a href="#kontakt" class="hero-cta hero-stagger">Skontaktuj się →</a>
+      </div>
+      <div class="hero-right-text">SUWAŁKI</div>
+      
+      <div class="scroll-indicator">
+        <div class="scroll-dot"></div>
+      </div>
+
+      <!-- HORIZONTAL SCROLL TICKER (Pure CSS infinite loop) -->
+      <div class="hero-ticker">
+        <div class="ticker-wrapper">
+          <div class="ticker-content">
+            NIERUCHOMOŚCI • SUWAŁKI • NEGOCJACJE • POŚREDNICTWO • ZABEZPIECZENIE TRANSAKCJI • NIERUCHOMOŚCI • SUWAŁKI • NEGOCJACJE • POŚREDNICTWO • ZABEZPIECZENIE TRANSAKCJI • 
+          </div>
+          <div class="ticker-content">
+            NIERUCHOMOŚCI • SUWAŁKI • NEGOCJACJE • POŚREDNICTWO • ZABEZPIECZENIE TRANSAKCJI • NIERUCHOMOŚCI • SUWAŁKI • NEGOCJACJE • POŚREDNICTWO • ZABEZPIECZENIE TRANSAKCJI • 
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- O MNIE SECTION (Deliberate Grid break heading layout) -->
+    <section class="o-mnie reveal" id="o-mnie">
+      <div class="o-mnie-container">
+        <div class="o-mnie-left">
+          <span class="o-mnie-eyebrow">DEDYKOWANE PRZYMIERZE</span>
+          <div class="o-mnie-vertical-line"></div>
+          
+          <!-- Grid overflow setup is-visible -->
+          <h2 class="o-mnie-h2">Strategiczne podejście do transakcji</h2>
+          
+          <div class="o-mnie-body">
+            <p>
+              Praca z osobistym brokerem to standard znany z największych metropolii. Reprezentuję wyłącznie jedną stronę umowy — chroniąc Twój kapitał i dbając o to, by każda decyzja miała realne uzasadnienie rynkowe.
+            </p>
+            <p>
+              Działam w Suwałkach i okolicznych powiatach. Oferuję bezprecedensowy poziom zaangażowania, stawiając na pełną przejrzystość, twarde liczby i twarde negocjacje cenowe.
+            </p>
+          </div>
+          <div class="o-mnie-contact-block">
+            <span class="o-mnie-label">BEZPOŚREDNI DIALOG</span>
+            <a href="tel:727170424" class="o-mnie-phone">727 170 424</a>
+            <a href="mailto:nieruchomoscigrygo@gmail.com" class="o-mnie-email">nieruchomoscigrygo@gmail.com</a>
+          </div>
+        </div>
+        <div class="o-mnie-right">
+          <div class="o-mnie-accent-line"></div>
+          <div class="o-mnie-offset-block">
+            <div class="o-mnie-city">Suwałki</div>
+            <div class="o-mnie-accent-short"></div>
+            <p class="o-mnie-descriptors">Suwerenność • Negocjacje Cenowe • Pełna Odpowiedzialność</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MANIFESTO SECTION (Zasady Grygo - Asymmetrical breath margin space) -->
+    <section class="brand-manifesto reveal">
+      <div class="manifesto-grid">
+        <div class="manifesto-card">
+          <span class="manifesto-number">KODEKS • I</span>
+          <h3 class="manifesto-title">Brak prowizji dwustronnej</h3>
+          <p class="manifesto-text">Nigdy nie biorę wynagrodzenia od obu stron jednocześnie. Stoję po Twojej stronie stołu, wykluczając jakikolwiek konflikt interesów.</p>
+        </div>
+        <div class="manifesto-card">
+          <span class="manifesto-number">KODEKS • II</span>
+          <h3 class="manifesto-title">Kamera, nie taśma produkcyjna</h3>
+          <p class="manifesto-text">Prowadzę maksymalnie 5 strategicznych spraw naraz. Otrzymujesz bezpośredni telefon do decydenta, bez pośredników i stażystów.</p>
+        </div>
+        <div class="manifesto-card">
+          <span class="manifesto-number">KODEKS • III</span>
+          <h3 class="manifesto-title">Całkowita poufność</h3>
+          <p class="manifesto-text">Chronię tożsamość i plany moich klientów. Wiele kluczowych transakcji na moim rynku realizuję w formule off-market.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- USŁUGI SECTION (Asymmetrical Spacing spacing: 190px - large aerial presence) -->
+    <section class="uslugi reveal" id="uslugi">
+      <div class="uslugi-header">
+        <span class="uslugi-eyebrow">SPEKTRUM MOŻLIWOŚCI</span>
+        <h2 class="uslugi-h2">Zbuduj przewagę na rynku</h2>
+      </div>
+      <div class="uslugi-rows">
+        <div class="uslugi-row">
+          <div class="uslugi-num">01</div>
+          <div class="uslugi-title">Pośrednictwo w sprzedaży</div>
+          <div class="uslugi-desc">Maksymalizacja wartości nieruchomości i pełna opieka — od selekcji kupców po finalną notarialną ugodę.</div>
+        </div>
+        <div class="uslugi-row">
+          <div class="uslugi-num">02</div>
+          <div class="uslugi-title">Pośrednictwo w zakupie</div>
+          <div class="uslugi-desc">Odnajdywanie unikalnych okazji (w tym poza oficjalnym rynkiem), rygorystyczny audyt prawny i negocjacje.</div>
+        </div>
+        <div class="uslugi-row">
+          <div class="uslugi-num">03</div>
+          <div class="uslugi-title">Twarde negocjacje warunków</div>
+          <div class="uslugi-desc">Korygowanie skrajnie niekorzystnych zapisów umownych i ubieganie się o najwyższy możliwy rabat cenowy.</div>
+        </div>
+        <div class="uslugi-row">
+          <div class="uslugi-num">04</div>
+          <div class="uslugi-title">Analiza strategiczna</div>
+          <div class="uslugi-desc">Chłodna ocena opłacalności inwestycji pod kątem stóp zwrotu i ryzyk demograficzno-lokalnych.</div>
+        </div>
+        <div class="uslugi-row">
+          <div class="uslugi-num">05</div>
+          <div class="uslugi-title">Zabezpieczenie transakcji</div>
+          <div class="uslugi-desc">Sprawdzenie stanów prawnych, obciążeń hipotecznych oraz bezpiecznych form uiszczenia środków finansowych.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE STRATEGIC PLANNER/CONCIERGE (Breathing rhythm: 110px spacing) -->
+    <section class="concierge-section reveal" id="doradztwo">
+      <div class="concierge-grid">
+        <div class="concierge-left">
+          <span class="concierge-eyebrow">DORADZTWO INICJUJĄCE</span>
+          <h2 class="concierge-h2">Ustal strategię w 3 kliki</h2>
+          <p class="concierge-lead">
+            Wybierz parametry planowanej transakcji poniżej. Zobacz, w jaki sposób mogę uchronić Twoje środki i jaką ścieżkę postępowania rekomenduję dla danego przedsięwzięcia.
+          </p>
+        </div>
+        <div class="concierge-right">
+          <span class="planner-title">CYFROWY BRIEF DORADCZY</span>
+          
+          <div class="planner-group">
+            <span class="planner-label">1. Rodzaj Twojego zamierzenia</span>
+            <div class="planner-options" id="optIntent">
+              <button class="planner-btn active" data-val="sprzedaz">Sprzedaż</button>
+              <button class="planner-btn" data-val="zakup">Zakup / Inwestycja</button>
+              <button class="planner-btn" data-val="negocjacje">Same Negocjacje</button>
+            </div>
+          </div>
+
+          <div class="planner-group">
+            <span class="planner-label">2. Segment rynku</span>
+            <div class="planner-options" id="optSegment">
+              <button class="planner-btn active" data-val="mieszkanie">Apartament / Dom</button>
+              <button class="planner-btn" data-val="grunt">Działka / Grunt</button>
+              <button class="planner-btn" data-val="komercja">Kamienica / Komercyjny</button>
+            </div>
+          </div>
+
+          <div class="planner-group">
+            <span class="planner-label">3. Twój główny priorytet</span>
+            <div class="planner-options" id="optPriority">
+              <button class="planner-btn active" data-val="cena">Maksymalny Zysk / Rabat</button>
+              <button class="planner-btn" data-val="dyskrecja">Pełna Dyskrecja</button>
+              <button class="planner-btn" data-val="bezpieczenstwo">Ochrona Prawna</button>
+            </div>
+          </div>
+
+          <div class="planner-card-advice">
+            <span class="advice-header">REKOMENDOWANY MODEL DZIAŁANIA</span>
+            <p class="advice-content" id="adviceText">
+              Wybierz opcje, aby wygenerować dedykowany brief strategiczny...
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JAK PRACUJĘ SECTION (Light contrast space breathing) -->
+    <section class="jak-pracuje reveal" id="jak-pracuje">
+      <div class="jak-pracuje-header">
+        <span class="jak-pracuje-eyebrow">FILOZOFIA PROCESU</span>
+        <h2 class="jak-pracuje-h2">Prosta droga. Czarno na białym.</h2>
+      </div>
+      <div class="process-rows">
+        <div class="process-row">
+          <div class="process-num">01</div>
+          <div class="process-title">Bezpłatna konsultacja</div>
+          <div class="process-desc">Rozmawiamy o Twoich celach rynkowych i weryfikujemy realność i opłacalność planowanego kroku.</div>
+        </div>
+        <div class="process-row">
+          <div class="process-num">02</div>
+          <div class="process-title">Chłodna ocena rynku</div>
+          <div class="process-desc">Bez emocji, tylko liczby, transakcje historyczne i aktualne trendy na terenie Suwałk i północy Polski.</div>
+        </div>
+        <div class="process-row">
+          <div class="process-num">03</div>
+          <div class="process-title">Zdecydowane uderzenie</div>
+          <div class="process-desc">Wdrażam unikalną strategię negocjacyjną lub marketingową ukierunkowaną na natychmiastowe zdobycie przewagi.</div>
+        </div>
+        <div class="process-row">
+          <div class="process-num">04</div>
+          <div class="process-title">Bezpieczna przystań</div>
+          <div class="process-desc">Kompletuję i weryfikuję wszystkie załączniki i akta przedłożone pod podpis u notariusza, chroniąc Twój spokój.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT SECTION (Strategic custom borders with left-to-right gold underlines animate) -->
+    <section class="kontakt reveal" id="kontakt">
+      <div class="kontakt-container">
+        <div class="kontakt-left">
+          <span class="kontakt-eyebrow">DOKONAJ WYBORU</span>
+          <h2 class="kontakt-h2">Zabezpiecz swoją transakcję już dzisiaj</h2>
+          <div class="kontakt-accent-line"></div>
+          
+          <div class="kontakt-item">
+            <span class="kontakt-label">TELEFON BEZPOŚREDNI</span>
+            <a href="tel:727170424" class="kontakt-phone">727 170 424</a>
+          </div>
+          
+          <div class="kontakt-item">
+            <span class="kontakt-label">ADRES E-MAIL</span>
+            <a href="mailto:nieruchomoscigrygo@gmail.com" class="kontakt-email">nieruchomoscigrygo@gmail.com</a>
+          </div>
+          
+          <div class="kontakt-item">
+            <span class="kontakt-label">OBSZAR OPERACYJNY</span>
+            <span class="kontakt-loc">Suwałki i okolice do 80 km</span>
+          </div>
+          
+          <div class="kontakt-item">
+            <span class="kontakt-label">MEDIA SPOŁECZNOŚCIOWE</span>
+            <a href="https://www.facebook.com/profile.php?id=61566933455240" target="_blank" rel="noopener noreferrer" class="kontakt-fb">Profil Grygo Nieruchomości →</a>
+          </div>
+        </div>
+        <div class="kontakt-right">
+          <form class="kontakt-form" id="contactForm">
+            <div class="form-row" style="display: flex; gap: 24px;">
+              <div class="form-group-custom" style="flex: 1;">
+                <input type="text" placeholder="Imię i nazwisko" required id="formName">
+              </div>
+              <div class="form-group-custom" style="flex: 1;">
+                <input type="tel" placeholder="Telefon" required id="formPhone">
+              </div>
+            </div>
+            <div class="form-group-custom">
+              <input type="email" placeholder="Adres e-mail" required id="formEmail">
+            </div>
+            <div class="form-group-custom">
+              <select required id="formSubject">
+                <option value="" disabled selected>Preferencja wiodąca</option>
+                <option value="sprzedaz">Zlecenie sprzedaży posiadanej nieruchomości</option>
+                <option value="zakup">Zakup i analiza rynkowej oferty</option>
+                <option value="negocjacje">Wsparcie negocjacyjne i redukcja ceny</option>
+                <option value="doradztwo">Analiza prawna / strategii inwestycji</option>
+                <option value="inne">Inny temat relacji</option>
+              </select>
+            </div>
+            <div class="form-group-custom">
+              <textarea placeholder="Szczegóły transakcji (np. wielkość, lokalizacja)..." required id="formMessage"></textarea>
+            </div>
+            <button type="submit" class="submit-button">INICJUJ ROZMOWĘ</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="footer-brand">Grygo Nieruchomości</div>
+        <div class="footer-city">Przejrzystość • Doświadczenie • Lojalność</div>
+      </div>
+      <div class="footer-center">
+        <img src="https://i.ibb.co/KpD79Mbz/503936029-122161069682564448-8956492118507403377-n.jpg" alt="Logo" class="footer-logo">
+        <div class="footer-copy">© 2025 Grygo Nieruchomości. Wszelkie prawa zastrzeżone.</div>
+      </div>
+      <div class="footer-right">
+        <a href="tel:727170424" class="footer-phone">727 170 424</a>
+        <a href="https://www.facebook.com/profile.php?id=61566933455240" target="_blank" rel="noopener noreferrer" class="footer-fb">Prywatne konto Facebook →</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Message -->
+  <div class="toast" id="toastMessage">Inicjacja udana. Skontaktuję się z Tobą w ciągu 4 godzin roboczych.</div>
+
+  <!-- React Mount Root -->
+  <div id="root"></div>
+
+  <!-- SCRIPTS -->
+  <script type="module" src="/src/main.tsx"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // CINEMATIC FADE-OUT OVERLAY ON LOAD
+      const flash = document.getElementById('cinematicFlash');
+      setTimeout(() => {
+        flash.classList.add('fade-out');
+        setTimeout(() => {
+          flash.remove();
+        }, 500);
+      }, 150);
+
+      // SCROLL INTERCEPT FOR NAVBAR BACKGROUND
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 70) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+
+      // AMBIENT MOUSE CURSOR GLOW FOR HIGH PREMIUM FEEL
+      const ambientGlow = document.getElementById('ambientGlow');
+      document.addEventListener('mousemove', (e) => {
+        const x = e.clientX;
+        const y = e.clientY;
+        ambientGlow.style.background = `radial-gradient(circle 350px at ${x}px ${y}px, rgba(30, 60, 110, 0.05), transparent 80%),
+                                      radial-gradient(circle 250px at 80% 20%, rgba(204, 166, 107, 0.02), transparent 70%)`;
+      });
+
+      // CUSTOM MOUSE LAG CURSOR FOR ROYAL WEB FEEL (2026 EDITION)
+      const cursor = document.getElementById('customCursor');
+      let cursorX = 0, cursorY = 0;
+      let mouseX = 0, mouseY = 0;
+      
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+      
+      function animateCursor() {
+        const delay = 0.15; // Smooth lag logic
+        cursorX += (mouseX - cursorX) * delay;
+        cursorY += (mouseY - cursorY) * delay;
+        cursor.style.left = `${cursorX}px`;
+        cursor.style.top = `${cursorY}px`;
+        requestAnimationFrame(animateCursor);
+      }
+      animateCursor();
+      
+      // Interactive scale up on links, inputs, and custom buttons
+      const hoverElements = document.querySelectorAll('a, button, select, input, textarea, .planner-btn, .uslugi-row, .process-row, .manifesto-card');
+      hoverElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          document.body.classList.add('cursor-hover');
+        });
+        el.addEventListener('mouseleave', () => {
+          document.body.classList.remove('cursor-hover');
+        });
+      });
+
+      // MOBILE NAVIGATION TOGGLE
+      const mobileNavToggle = document.getElementById('mobileNavToggle');
+      const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+
+      mobileNavToggle.addEventListener('click', () => {
+        mobileNavToggle.classList.toggle('open');
+        mobileNavOverlay.classList.toggle('open');
+        document.body.classList.toggle('no-scroll');
+      });
+
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileNavToggle.classList.remove('open');
+          mobileNavOverlay.classList.remove('open');
+          document.body.classList.remove('no-scroll');
+        });
+      });
+
+      // SCROLL REVEAL SCENE
+      const revealElements = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12
+      });
+
+      revealElements.forEach(el => observer.observe(el));
+
+      // INTERACTIVE STRATEGIC PLANNER/CONCIERGE COGNITIONS
+      const optIntent = document.getElementById('optIntent');
+      const optSegment = document.getElementById('optSegment');
+      const optPriority = document.getElementById('optPriority');
+      const adviceText = document.getElementById('adviceText');
+
+      const strategyAxioms = {
+        sprzedaz: {
+          mieszkanie: {
+            cena: "Rekomendowany model to 'Dynamic pricing' ze wsparciem profesjonalnego home-stagingu. Wyciągniemy dodatkowe 8-12% wartości dzięki pozycjonowaniu emocjonalnemu.",
+            dyskrecja: "Przeprowadzamy kameralną sprzedaż off-market. Informację o ofercie kierujemy wyłącznie do wybranych i zweryfikowanych inwestorów z naszej bazy bezpośredniej.",
+            bezpieczenstwo: "Rekomenduję zabezpieczenie transakcji rygorystyczną umową przedwstępną z zadatkiem oraz asystą bankową przy opłaceniu restrykcyjnych transz kredytowych."
+          },
+          grunt: {
+            cena: "Grunt wymaga audytu planistycznego i warunków zabudowy przed wystawieniem na rynek. Podniesienie wartości uzyskamy, przygotowując koncepcję podziału geodezyjnego.",
+            dyskrecja: "Działki inwestycyjne o dużym metrażu oferujemy bezpośrednio funduszom deweloperskim bez publikacji na popularnych portalach, dbając o czystość negocjacji.",
+            bezpieczenstwo: "Dokładny audyt sieci przesyłowych i ksiąg wieczystych chroni Cię przed przyszłymi roszczeniami nabywcy rzekomo nieświadomego wad fizycznych."
+          },
+          komercja: {
+            cena: "Analizujemy kapitalizację stopy zwrotu (Yield) oraz optymalizujemy umowy najmu w celu przedstawienia zyskownego produktu dla inwestorów instytucjonalnych.",
+            dyskrecja: "Pełny zakaz jawnej reklamy. Wszystkich inwestorów zobowiązujemy do podpisania rygorystycznej klauzuli poufności (NDA) przed przekazaniem prospektu.",
+            bezpieczenstwo: "Wdrożenie struktur płatności escrow lub powierniczego rachunku bankowego zabezpiecza wielomilionowe transakcje komercyjne."
+          }
+        },
+        zakup: {
+          mieszkanie: {
+            cena: "Selekcjonuję oferty o zaniżonym standardzie wykończenia (potencjał flip/remont) lub pilne sprzedaże, wypracowując twardy rabat o wartości 15-20 tys. złotych poniżej rynku.",
+            dyskrecja: "Aktywuję kanały szeptane pośród lokalnych właścicieli w poszukiwaniu nieruchomości, które dopiero miały trafić na ogólne portale.",
+            bezpieczenstwo: "Nadleśnictwa, konserwator zabytków, roszczenia komornicze — analizuję każdą ukrytą barierę, by uchronić Twoje ciężko zarobione środki przed utratą."
+          },
+          grunt: {
+            cena: "Analizujemy ceny transakcyjne gruntów sąsiednich, by uzbroić się w argumenty do agresywnej redukcji ceny u sprzedającego.",
+            dyskrecja: "Jeżeli reprezentuję zamożnego lidera biznesu, skupuję ziemię jako rzekomy pełnomocnik, nie windując przy tym ceny nazwiskiem klienta.",
+            bezpieczenstwo: "Krytyczne sprawdzenie klasy gruntu, melioracji, służebności drogi koniecznej oraz planu zagospodarowania przestrzennego (MPZP)."
+          },
+          komercja: {
+            cena: "Weryfikuję realną rentowność (ROI / NOI) najemców budynku, odrzucając sztucznie zawyżone prognozy biur obrotu nieruchomości.",
+            dyskrecja: "Nabywanie kamienic lub budynków użytkowych poprzez podmioty celowe dla zachowania anonimowości ustrukturyzowanej grupy kapitałowej.",
+            bezpieczenstwo: "Audyt techniczny substancji budowlanej dachu i stropów połączony z analizą historyczną własności gruntów."
+          }
+        },
+        negocjacje: {
+          mieszkanie: {
+            cena: "Wykorzystujemy twardy audyt rzeczoznawcy, wypunktowując błędy konstrukcyjne i instalacyjne, uzyskując natychmiastowe obniżenie żądań cenowych.",
+            dyskrecja: "Reprezentuję Cię na zewnątrz, podczas gy Ty pozostajesz neutralną stroną transakcji — bez ujawniania poziomu motywacji finansowej.",
+            bezpieczenstwo: "Uzgadniamy ostateczne limity i klauzule kar umownych, blokując potencjalne jednostronne wycofanie się sprzedawcy bez zadośćuczynienia."
+          },
+          grunt: {
+            cena: "Udokumentowany brak dostępu do infrastruktury technicznej daje szansę na redukcję wyjściowej stawki o nawet 25%.",
+            dyskrecja: "Ruchy zakupowe gruntów przez strategiczne podmioty wymagają wyważonej relacji, bez ujawniania planów konsolidacyjnych.",
+            bezpieczenstwo: "Wykluczenie ryzyk pierwokupu (od Lasów Państwowych lub KOWR) na poziomie notarialnym przed zdeponowaniem środków."
+          },
+          komercja: {
+            cena: "Przeprowadzamy chłodne porównanie wycen budynków referencyjnych, negocjując optymalne stawki czynszu bazowego i okresów bezczynszowych.",
+            dyskrecja: "Działanie poprzez niezależnego advisora uspokaja atmosferę negocjacji wielkich graczy, którzy wolą rozmowę merytoryczną od prestiżowych potyczek.",
+            bezpieczenstwo: "Ścisła weryfikacja i podział ryzyk wykonawczych, gwarancji budowlanych oraz kar za opóźnienia w przekazaniu przedmiotu najmu."
+          }
+        }
+      };
+
+      function recalculateStrategicBrief() {
+        const intent = optIntent.querySelector('.planner-btn.active').getAttribute('data-val');
+        const segment = optSegment.querySelector('.planner-btn.active').getAttribute('data-val');
+        const priority = optPriority.querySelector('.planner-btn.active').getAttribute('data-val');
+
+        const solution = strategyAxioms[intent]?.[segment]?.[priority] || "Proszę sfinalizować wybrane kombinacje strategii doradztwa...";
+        adviceText.style.opacity = "0";
+        setTimeout(() => {
+          adviceText.textContent = solution;
+          adviceText.style.opacity = "1";
+        }, 150);
+      }
+
+      function setupGroupClick(group) {
+        const buttons = group.querySelectorAll('.planner-btn');
+        buttons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            recalculateStrategicBrief();
+          });
+        });
+      }
+
+      setupGroupClick(optIntent);
+      setupGroupClick(optSegment);
+      setupGroupClick(optPriority);
+
+      // Initial run for strategic brief planner
+      recalculateStrategicBrief();
+
+      // CONTACT FORM PREP
+      const contactForm = document.getElementById('contactForm');
+      const toastMessage = document.getElementById('toastMessage');
+
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        toastMessage.classList.add('active');
+        contactForm.reset();
+
+        setTimeout(() => {
+          toastMessage.classList.remove('active');
+        }, 4500);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "Grygo Nieruchomości",
+  "description": "Osobisty broker nieruchomości w Suwałkach — strategiczne decyzje i ochrona klienta.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
